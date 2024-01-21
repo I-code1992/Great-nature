@@ -5,8 +5,13 @@ body {
   font-style: normal;
 }
 
+a {
+  color: #885df1;
+}
+
 h1 {
   font-size: 50px;
+  margin-top: 0;
   padding: 30px 0px 0px;
 }
 
@@ -24,8 +29,9 @@ p {
 }
 
 .search-input {
-  background-color: white;
+  background-color: rgb(245, 217, 245);
   font-size: 16px;
+  border: none;
   border-radius: 6px;
   width: 70%;
   padding: 15px 20px;
@@ -35,10 +41,39 @@ p {
   background-color: #885df1;
   width: 20%;
   border-radius: 6px;
+  margin-left: 5px;
   padding: 15px 20px;
   font-size: 16px;
 }
 
-.current-temp {
-  display: block;
+main {
+  padding: 30px 0;
+}
+
+.weather-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-details {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.current-temp-container {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 13px;
 }
