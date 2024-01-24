@@ -41,7 +41,7 @@ p {
   background-color: #885df1;
   width: 20%;
   border-radius: 6px;
-  margin-left: 5px;
+  margin-left: 20px;
   padding: 15px 20px;
   font-size: 16px;
 }
@@ -54,6 +54,12 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.current-temp-container {
+  margin-top: 0;
+  padding: 30px 40px 0px;
+  display: inline-block;
+  justify-content: right;
+}
 
 .weather-city {
   margin: 0;
@@ -64,11 +70,6 @@ main {
 .weather-details {
   font-size: 16px;
   line-height: 20px;
-}
-
-.current-temp-container {
-  display: flex;
-  align-items: center;
 }
 
 footer {
