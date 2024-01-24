@@ -15,10 +15,6 @@ h1 {
   padding: 30px 0px 0px;
 }
 
-p {
-  font-size: 20px;
-}
-
 .weather-app {
   background-color: white;
   max-width: 600px;
@@ -54,20 +50,46 @@ main {
   display: flex;
   justify-content: space-between;
 }
+
+.weather-temp {
+  color: black;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.weather-icon {
+  color: black;
+  font-size: 50px;
+}
+
+.temp-unit {
+  color: black;
+  position: relative;
+  top: -23px;
+  font-size: 25px;
+}
+
 .current-temp-container {
+  color: rgba(28, 23, 54, 0.4);
   margin-top: 0;
   padding: 30px 40px 0px;
   display: inline-block;
   justify-content: right;
+  font-weight: 500;
+  line-height: 24px;
 }
 
+.current-temp-container strong {
+  color: #f65282;
+}
 .weather-city {
   margin: 0;
-  font-size: 38px;
+  font-size: 50px;
   line-height: 48px;
 }
 
 .weather-details {
+  color: rgba(28, 23, 54, 0.4);
   font-size: 16px;
   line-height: 20px;
 }
