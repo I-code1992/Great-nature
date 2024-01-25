@@ -53,13 +53,14 @@ main {
 
 .weather-temp {
   color: black;
-  font-size: 60px;
+  font-size: 71px;
   font-weight: bolder;
+  position: relative;
+  top: -22px;
 }
 
 .weather-icon {
-  color: black;
-  font-size: 50px;
+  width: 88px;
 }
 
 .temp-unit {
@@ -72,7 +73,7 @@ main {
 .current-temp-container {
   color: rgba(28, 23, 54, 0.4);
   margin-top: 0;
-  padding: 30px 40px 0px;
+  padding: 20px 25px 0px;
   display: inline-block;
   justify-content: right;
   font-weight: 500;
