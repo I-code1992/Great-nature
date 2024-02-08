@@ -97,7 +97,10 @@ main {
 }
 
 .weather-forecast-container {
+  display: flex;
+  justify-content: space-around;
   margin: 30px;
+  padding: 20px;
 }
 
 footer {
