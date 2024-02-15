@@ -18,6 +18,7 @@ function refreshWeather(response) {
   conditionElement.innerHTML = response.data.condition.description;
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -42,7 +43,7 @@ function formatDate(date) {
 
 function searchCity(city) {
   let apiKey = "5eb0eof63a40df20e382fa4batcaf05e";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
 }
 
@@ -53,7 +54,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayforecast() {
+function getForecast(city) {
+  let apiKey = "5eb0eof63a40df20e382fa4batcaf05e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -62,10 +71,10 @@ function displayforecast() {
       forecastHtml +
       `
      <div class="weather-forecast-day">
-           <div class="weather-forecast-date">${day}</div>
+           <div class="weather-forecast-date">Tue</div>
              <div class="weather-forecast-icon">🌤️</div>
                <div class="weather-forecast-temperature">
-                 <span class="weather-forecast-temperature-max"> 18 </span>
+                 <span class="weather-forecast-temperature-max"> 18° </span>
                  <span class="weather-forecast-temperature-min"> 12 </span>
                </div>
              </div>
@@ -82,4 +91,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Lisbon");
-displayforecast();
