@@ -15,6 +15,13 @@ h1 {
   padding: 30px 0px 0px;
 }
 
+img {
+  position: relative;
+  top: 17px;
+  height: 88px;
+  width: 88px;
+}
+
 .weather-app {
   background-color: white;
   max-width: 600px;
@@ -60,10 +67,6 @@ main {
   right: -5px;
 }
 
-.weather-icon {
-  width: 88px;
-}
-
 .temp-unit {
   color: black;
   position: static;
@@ -94,6 +97,22 @@ main {
   color: rgba(28, 23, 54, 0.4);
   font-size: 16px;
   line-height: 20px;
+}
+
+.weather-forecast-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weather-forecast-date {
+  text-align: center;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  padding-top: 25px;
 }
 
 .weather-forecast-container {
